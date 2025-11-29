@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>store</groupId>
-    <artifactId>product</artifactId>
+    <artifactId>account</artifactId>
     <version>1.0.0</version>
 
     <properties>

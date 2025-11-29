@@ -24,12 +24,22 @@ public interface ProductController {
         @PathVariable("id") String id
     );
 
+    @PostMapping("/product/login")
+    public ResponseEntity<ProductOut> findByEmailAndPassword(
+        @RequestBody ProductIn in
+    );
+
     @GetMapping("/product")
     public ResponseEntity<List<ProductOut>> findAll();
 
     @DeleteMapping("/product/{id}")
     public ResponseEntity<Void> delete(
         @PathVariable("id") String id
+    );
+
+    @GetMapping("/product/whoami")
+    public ResponseEntity<ProductOut> whoAmI(
+        @RequestHeader(value = "id-product", required = true) String idProduct
     );
 
 }
